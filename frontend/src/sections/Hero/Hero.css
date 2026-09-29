@@ -1,0 +1,335 @@
+/* =========================================
+   HERO
+========================================= */
+
+.hero-section {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 650px;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   YELLOW RIGHT SIDE
+========================================= */
+
+.hero-yellow-shape {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 31%;
+
+  height: 100%;
+
+  background: #ffcc18;
+
+  clip-path: polygon(
+    22% 0,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+
+  z-index: 0;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.hero-container {
+  width: 100%;
+
+  max-width: 1250px;
+
+  min-height: 650px;
+
+  margin: 0 auto;
+
+  padding: 65px 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 35px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.hero-content {
+  width: 55%;
+
+  max-width: 690px;
+
+  position: relative;
+
+  z-index: 3;
+}
+
+.hero-welcome {
+  display: block;
+
+  margin-bottom: 16px;
+
+  color: #e9ad00;
+
+  font-size: 13px;
+
+  font-weight: 500;
+}
+
+.hero-content h1 {
+  margin: 0 0 18px;
+
+  color: #111827;
+
+  font-size: 42px;
+
+  line-height: 1.18;
+
+  font-weight: 700;
+}
+
+.hero-content h1 span {
+  color: #111827;
+}
+
+.hero-content p {
+  max-width: 700px;
+
+  margin: 0 0 25px;
+
+  color: #526174;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.hero-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 12px 19px;
+
+  background: #ffc629;
+
+  border-radius: 25px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 6px 15px rgba(255, 198, 41, 0.25);
+
+  transition: 0.25s ease;
+}
+
+.hero-button:hover {
+  background: #efa900;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.hero-image-container {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  padding-right: 15px;
+}
+
+.hero-image {
+  width: min(100%, 530px);
+
+  height: auto;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* =========================================
+   LARGE SCREEN
+========================================= */
+
+@media (min-width: 1400px) {
+  .hero-container {
+    max-width: 1400px;
+
+    padding-left: 60px;
+  }
+
+  .hero-content h1 {
+    font-size: 46px;
+  }
+
+  .hero-image {
+    width: 125%;
+
+    max-width: 720px;
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .hero-container {
+    min-height: 570px;
+
+    padding: 55px 30px;
+  }
+
+  .hero-content {
+    width: 52%;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-image-container {
+    width: 48%;
+
+    min-height: 460px;
+  }
+
+  .hero-image {
+    width: 125%;
+
+    transform: translateX(10px);
+  }
+
+  .hero-yellow-shape {
+    width: 35%;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .hero-section {
+    min-height: auto;
+  }
+
+  .hero-yellow-shape {
+    top: auto;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 42%;
+
+    clip-path: polygon(
+      15% 18%,
+      100% 0,
+      100% 100%,
+      0 100%
+    );
+  }
+
+  .hero-container {
+    min-height: auto;
+
+    padding: 55px 20px 35px;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 25px;
+  }
+
+  .hero-content {
+    width: 100%;
+
+    max-width: 650px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .hero-image-container {
+    width: 100%;
+
+    min-height: 330px;
+  }
+
+  .hero-image {
+    width: 100%;
+
+    max-width: 500px;
+
+    transform: none;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+  .hero-container {
+    padding: 45px 18px 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-image-container {
+    min-height: 270px;
+  }
+}

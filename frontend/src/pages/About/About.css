@@ -1,0 +1,399 @@
+/* =========================================================
+   ABOUT PAGE
+========================================================= */
+
+.about-page {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* 
+   ABOUT HERO - BACKGROUND VIDEO
+   */
+
+
+.about-hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 600px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #111827;
+}
+
+/* Background Video */
+
+.about-bg-video {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 0;
+}
+
+/* Dark Overlay */
+
+.about-bg-overlay {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.58);
+
+  z-index: 1;
+}
+
+/* Hero Container */
+
+.about-hero-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 100px 60px;
+}
+
+/* Hero Content */
+
+.about-hero-content {
+  max-width: 650px;
+}
+
+.about-hero-content .section-label {
+  display: inline-block;
+
+  margin-bottom: 15px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  color: #ffcc18;
+}
+
+.about-hero-content h1 {
+  margin: 0;
+
+  font-size: 56px;
+  line-height: 1.15;
+
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+.about-hero-content h1 span {
+  display: block;
+
+  color: #ffcc18;
+}
+
+.about-hero-content p {
+  max-width: 600px;
+
+  margin: 25px 0 0;
+
+  font-size: 16px;
+  line-height: 1.8;
+
+  color: #e5e7eb;
+}
+
+
+/* =========================================================
+   ABOUT SERVICE SECTIONS
+========================================================= */
+
+.about-service-section {
+  width: 100%;
+
+  padding: 100px 60px;
+
+  background: #323438;
+}
+
+.about-service-section:nth-child(even) {
+  background: #f8fafc;
+}
+
+.about-service-container {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+.about-service-content {
+  max-width: 560px;
+}
+
+.about-service-content .section-label {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  color: #ffcc18;
+}
+
+.about-service-content h2 {
+  margin: 0;
+
+  font-size: 42px;
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  color: #7c7e84;
+}
+
+.about-service-content h2 span {
+  color: #ffcc18;
+}
+
+.about-service-content p {
+  margin: 20px 0 0;
+
+  font-size: 15px;
+  line-height: 1.8;
+
+  color: #6b7280;
+}
+
+
+/* =========================================================
+   SERVICE IMAGES
+========================================================= */
+
+.about-service-image {
+  width: 100%;
+
+  min-height: 400px;
+
+  background: #f1f5f9;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+}
+
+.about-service-image img {
+  width: 100%;
+  height: 400px;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.about-service-image:hover img {
+  transform: scale(1.03);
+}
+
+
+/* =========================================================
+   REVERSE SERVICE SECTIONS
+========================================================= */
+
+.about-service-reverse .about-service-container {
+  grid-template-columns: 1fr 1fr;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  /* Hero */
+
+  .about-hero {
+    min-height: 520px;
+  }
+
+  .about-hero-container {
+    padding: 80px 30px;
+  }
+
+  .about-hero-content {
+    max-width: 700px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 44px;
+  }
+
+  /* Service */
+
+  .about-service-section {
+    padding: 80px 30px;
+  }
+
+  .about-service-container {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .about-service-reverse .about-service-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-service-content {
+    max-width: 700px;
+
+    margin: 0 auto;
+  }
+
+  .about-service-content h2 {
+    font-size: 36px;
+  }
+
+  .about-service-image {
+    min-height: 350px;
+  }
+
+  .about-service-image img {
+    height: 350px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  /* Hero */
+
+  .about-hero {
+    min-height: 500px;
+  }
+
+  .about-hero-container {
+    padding: 70px 20px;
+  }
+
+  .about-hero-content {
+    max-width: 100%;
+  }
+
+  .about-hero-content h1 {
+    font-size: 34px;
+  }
+
+  .about-hero-content p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .about-bg-overlay {
+    background: rgba(0, 0, 0, 0.65);
+  }
+
+  /* Service */
+
+  .about-service-section {
+    padding: 65px 20px;
+  }
+
+  .about-service-container {
+    gap: 35px;
+  }
+
+  .about-service-content h2 {
+    font-size: 30px;
+  }
+
+  .about-service-content p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .about-service-image {
+    min-height: 280px;
+  }
+
+  .about-service-image img {
+    height: 280px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  /* Hero */
+
+  .about-hero {
+    min-height: 480px;
+  }
+
+  .about-hero-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 30px;
+  }
+
+  /* Service */
+
+  .about-service-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .about-service-content h2 {
+    font-size: 27px;
+  }
+
+  .about-service-image img {
+    height: 240px;
+  }
+}

@@ -1,0 +1,146 @@
+.Tech-section {
+  width: 100%;
+  padding: 90px 60px;
+  background: #ffffff;
+}
+
+.Tech-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Heading */
+
+.Tech-heading {
+  max-width: 700px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.section-label {
+  display: inline-block;
+  margin-bottom: 14px;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+
+  color: #2563eb;
+}
+
+.Tech-heading h2 {
+  margin: 0;
+
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 700;
+
+  color: #111827;
+}
+
+.Tech-heading h2 span {
+  color: #ffcc18;
+}
+
+.Tech-heading p {
+  max-width: 620px;
+  margin: 18px auto 0;
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  color: #6b7280;
+}
+
+/* Client Logos */
+
+.Technologie-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.Technologie-logo-card {
+  height: 150px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+
+  transition: all 0.3s ease;
+}
+
+.Technologie-logo-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #dbeafe;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+}
+
+.Technologie-logo-card img {
+  max-width: 150px;
+  max-height: 80px;
+
+  width: auto;
+  height: auto;
+  
+
+  object-fit: contain;
+
+  
+
+  transition: all 0.3s ease;
+}
+
+.Technologie-logo-card:hover img {
+  filter: grayscale(0%);
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .Technologie-section {
+    padding: 75px 30px;
+  }
+
+  .Technologies-heading h2 {
+    font-size: 36px;
+  }
+
+  .Technologie-logos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .Technologie-section {
+    padding: 65px 20px;
+  }
+
+  .Technologie-heading h2 {
+    font-size: 30px;
+  }
+
+  .Technologie-heading p {
+    font-size: 14px;
+  }
+
+  .Technologie-logos {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .Technologie-logo-card {
+    height: 130px;
+  }
+}

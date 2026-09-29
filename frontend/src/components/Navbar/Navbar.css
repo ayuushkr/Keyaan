@@ -1,0 +1,459 @@
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+  width: 100%;
+  height: 90px;
+
+  padding: 0 50px;
+
+  display: flex;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 9999;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+
+/* =========================================
+   YELLOW DIAGONAL
+========================================= */
+
+.navbar-yellow-shape {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 25%;
+
+  height: 100%;
+
+  background: #ffcc18;
+
+  clip-path: polygon(
+    22% 0,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+
+  z-index: -1;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+/* =========================
+   LOGO ADJUSTMENT
+========================= */
+
+/* =========================
+   LOGO POSITION
+========================= */
+
+.navbar-logo {
+  width: 260px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  flex-shrink: 0;
+
+  /* Move logo toward right */
+  padding-left: 120px;
+}
+
+.navbar-logo img {
+  max-width: 90%;
+  height: 4rem;
+  vertical-align: middle;
+  
+
+  display: block;
+  object-fit: contain;
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+.nav-menu {
+  flex: 1;
+
+  height: 130%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 25px;
+
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================
+   NAV LINKS
+========================================= */
+
+.nav-link {
+  height: 100%;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color: #111111;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition: color 0.2s ease;
+}
+
+.nav-link svg {
+  color: #e9ad00;
+
+  stroke-width: 2.5;
+
+  flex-shrink: 0;
+}
+
+.nav-link:hover {
+  color: #e4a900;
+}
+
+
+/* =========================================
+   SERVICES
+========================================= */
+
+.services-dropdown {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+}
+
+.services-dropdown-button {
+  height: 100%;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #111111;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  font-family: inherit;
+
+  cursor: pointer;
+}
+
+.services-dropdown-button > svg:first-child {
+  color: #e9ad00;
+
+  stroke-width: 2.5;
+}
+
+.dropdown-arrow {
+  color: #111111 !important;
+
+  transition: transform 0.2s ease;
+}
+
+.services-dropdown:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+
+/* =========================================
+   DROPDOWN
+========================================= */
+
+.services-dropdown-menu {
+  position: absolute;
+
+  top: 76px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 250px;
+
+  max-height: 500px;
+
+  overflow-y: auto;
+
+  padding: 7px 0;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.12);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease;
+}
+
+.services-dropdown:hover .services-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.services-dropdown-item {
+  display: block;
+
+  padding: 10px 17px;
+
+  color: #333333;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition: 0.2s ease;
+}
+
+.services-dropdown-item:hover {
+  color: #e6a900;
+
+  background: #fff9e5;
+
+  padding-left: 22px;
+}
+
+
+/* =========================================
+   CONTACT BUTTON
+========================================= */
+
+.navbar-contact {
+  min-width: 130px;
+  height: 43px;
+
+  padding: 0 15px 0 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  background: #050505;
+
+  border: 2px solid #f1b800;
+
+  border-radius: 25px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  position: relative;
+  z-index: 2;
+
+  transition: 0.25s ease;
+}
+
+.navbar-contact:hover {
+  background: #f1b800;
+
+  color: #111111;
+}
+
+.navbar-contact-icon {
+  width: 29px;
+  height: 29px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  color: #f1b800;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+  .navbar {
+    padding: 0 25px;
+  }
+
+  .navbar-logo {
+    width: 110px;
+  }
+
+  .nav-menu {
+    gap: 15px;
+  }
+
+  .nav-link,
+  .services-dropdown-button {
+    font-size: 13px;
+  }
+
+  .navbar-contact {
+    min-width: 115px;
+  }
+}
+
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 850px) {
+  .navbar {
+    padding: 0 18px;
+  }
+
+  .navbar-logo img {
+    width: 65px;
+  }
+
+  .nav-menu {
+    gap: 11px;
+  }
+
+  .nav-link,
+  .services-dropdown-button {
+    font-size: 12px;
+  }
+
+  .nav-link svg,
+  .services-dropdown-button > svg:first-child {
+    display: none;
+  }
+
+  .navbar-contact {
+    min-width: 105px;
+
+    height: 38px;
+
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .navbar {
+    height: 62px;
+
+    padding: 0 14px;
+  }
+
+  .navbar-logo {
+    width: 70px;
+  }
+
+  .navbar-logo img {
+    width: 60px;
+  }
+
+  .nav-menu {
+    justify-content: flex-start;
+
+    gap: 15px;
+
+    overflow-x: auto;
+  }
+
+  .nav-link,
+  .services-dropdown,
+  .services-dropdown-button {
+    height: 62px;
+  }
+
+  .nav-link,
+  .services-dropdown-button {
+    font-size: 11px;
+  }
+
+  .navbar-contact {
+    display: none;
+  }
+
+  .services-dropdown-menu {
+    top: 62px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 10px;
+  }
+
+  .navbar-logo {
+    display: none;
+  }
+
+  .nav-menu {
+    width: 100%;
+
+    justify-content: center;
+
+    gap: 13px;
+  }
+
+  .nav-link,
+  .services-dropdown-button {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,303 @@
+.services-section {
+  width: 100%;
+  background: whitesmoke;
+  
+
+  padding: 100px 20px;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.services-heading {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  text-align: center;
+  color: #111111;
+  font-size: 50px;
+  font-weight: 500;
+  font-style:normal;
+  
+}
+
+.services-heading p {
+  margin: 0 auto 50px;
+  max-width: 600px;
+  text-align: center;
+  color: #444444;
+  font-weight: 200;
+  white-space: nowrap;
+  
+}
+
+
+.services-heading p {
+  margin: 0;
+
+  max-width: 600px;
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  color: #666666;
+  display: flex;
+}
+
+
+/* =========================
+   SERVICE CATEGORIES
+========================= */
+
+.service-categories {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+
+  margin-bottom: 50px;
+}
+
+.service-category {
+  min-height: 120px;
+
+  border: 1px solid #e5e5e5;
+
+  background: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  cursor: pointer;
+
+  color: #222222;
+
+  transition: 0.3s ease;
+}
+
+.service-category:hover,
+.service-category.active {
+  background: #bbb31f;
+  color: #ffffff;
+
+  transform: translateY(-4px);
+}
+
+.service-category span {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   FEATURED SERVICE
+========================= */
+
+.featured-service {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  min-height: 500px;
+
+  background: #f6f7f8;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.service-image {
+  min-height: 500px;
+
+  padding: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-image-placeholder {
+  width: 100%;
+  height: 100%;
+
+  min-height: 430px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e3e4e6;
+
+  color: #777777;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.service-content {
+  padding: 60px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-number {
+  font-size: 14px;
+  font-weight: 700;
+
+  color: #888888;
+
+  margin-bottom: 15px;
+}
+
+.service-content h3 {
+  margin: 0 0 20px;
+
+  font-size: 38px;
+
+  color: #111111;
+}
+
+.service-content p {
+  margin: 0 0 25px;
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  color: #666666;
+}
+
+.service-content ul {
+  padding: 0;
+  margin: 0 0 30px;
+
+  list-style: none;
+}
+
+.service-content li {
+  margin-bottom: 10px;
+
+  font-size: 14px;
+
+  color: #444444;
+}
+
+.service-content li::before {
+  content: "✓";
+
+  margin-right: 10px;
+
+  font-weight: 700;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.service-button {
+  width: fit-content;
+
+  display: inline-flex;
+
+  align-items: center;
+  gap: 10px;
+
+  padding: 13px 20px;
+
+  background: #ffcc18;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  border-radius: 4px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.service-button:hover {
+  background: #333333;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .service-categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featured-service {
+    grid-template-columns: 1fr;
+  }
+
+  .service-image {
+    min-height: 350px;
+  }
+
+  .service-image-placeholder {
+    min-height: 300px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .services-section {
+    padding: 70px 20px;
+  }
+
+  .services-heading h2 {
+    font-size: 36px;
+  }
+
+  .service-categories {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+  }
+
+  .service-category {
+    min-height: 100px;
+  }
+
+  .service-content {
+    padding: 35px 25px;
+  }
+
+  .service-content h3 {
+    font-size: 30px;
+  }
+
+}
