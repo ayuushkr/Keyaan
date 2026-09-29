@@ -6,7 +6,7 @@ import {
   Headphones,
 } from "lucide-react";
 
-import "./WhyChooseUs.css";
+import "./WhyChooseus.css";
 
 const reasons = [
   {
@@ -46,7 +46,7 @@ const reasons = [
   },
 ];
 
-function WhyChooseUs() {
+function WhyChooseus() {
   return (
     <section className="why-choose-section">
       <div className="why-choose-container">
@@ -97,4 +97,4 @@ function WhyChooseUs() {
   );
 }
 
-export default WhyChooseUs;
+export default WhyChooseus;

@@ -7,7 +7,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-import "./Services.css";
+import "./services.css";
 
 
 const serviceData = [
